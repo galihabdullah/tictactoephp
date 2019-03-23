@@ -96,6 +96,7 @@ class MainController extends Controller
     {
         $ren = new RoomTable();
         $status = $ren->findRoom($args['roomname']);
+        if($status->get()->isEmpty())return $response->withStatus(404)->withJson(['status' => "not found", 'messages' => "invalid room"]);
         $status->update(['o_player' => $args['name']]);
         return $response->withStatus(201)->withJson([
             'status' => 'sukses',
