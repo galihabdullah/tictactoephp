@@ -8,7 +8,7 @@ use Slim\Views\Twig as TwigViews;
  *
  * @SWG\Swagger(
  *     basePath="",
- *     host="https://galihtictactoephp.herokuapp.com",
+ *     host="galihtictactoephp.herokuapp.com",
  *     schemes={"http"},
  *     @SWG\Info(
  *         version="1.0.0.0",
