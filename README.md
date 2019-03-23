@@ -5,3 +5,5 @@ applikasi ini untuk menyelesaikan challenge dari onero.id.
 - slim php framework
 - orm eloquent
 - swaggerphp > documentasi api
+
+documentasi api bisa kesini : http://galihtictactoephp.herokuapp.com/swagge
