@@ -42,15 +42,10 @@ $container['view'] = function ($container) {
 
     return $view;
 };
-$app->add(function ($request, $response, $next) {
-    try {
-        $response = $next($request, $response);
-    }
-    catch(Slim\Exception\NotFoundException $e) {
-        $notFoundHandler = $this->get('notFoundHandler');
-        return $notFoundHandler($request->withAttribute('message', $e->getMessage()), $response);
-    }
+$app->options('/{routes:.+}', function ($request, $response, $args) {
     return $response;
 });
+
+
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/../routes/web.php';
