@@ -13,9 +13,9 @@ Requirements :
 - composer
 - clone this repository
 - run this command :
-. composer require illuminate/database
-. touch bootstrap/database.php
-. import tictactoe3.sql
+- 1. composer require illuminate/database
+- 2. touch bootstrap/database.php
+- 3. import tictactoe3.sql
 - rename .env.example to .env and change database details
 - run application : cd public && php -S localhost:9000 -t public
 
