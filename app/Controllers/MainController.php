@@ -173,7 +173,7 @@ class MainController extends Controller
         if($room->get()->isEmpty())return $response->withStatus(404)->withJson(['status' => "not found", 'messages' => "invalid room"]);
 
         if(!$room->get()->contains("winner", null))
-        return $response->withStatus(404)->withJson(['status' => 'this battle has beend finished', 'messages' =>  $this->takeWinner($room->get()->last()['name_room'], $room->get()->last()['x_player'], $room->get()->last()['o_player'])]);
+        return $response->withStatus(404)->withJson($this->takeWinner($room->get()->last()['name_room'], $room->get()->last()['x_player'], $room->get()->last()['o_player']));
 
         if($room->get()->contains('x_player', $args['name']) && $room->get()->contains('o_player', null))
         return $response->withStatus(404)->withJson(['status' => 'o player not ready']);
