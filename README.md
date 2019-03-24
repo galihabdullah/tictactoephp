@@ -8,6 +8,3 @@ applikasi ini untuk menyelesaikan challenge dari onero.id.
 
 documentasi api bisa kesini : http://galihtictactoephp.herokuapp.com/swagger
 
-untuk menjalankan di local 
-Requirements :
-- Composer
