@@ -237,7 +237,7 @@ class MainController extends Controller
                   $returnValue['winner'] = $winner === "X" ? $xplayer : $oplayer;
                   $returnValue['status'] = "finished";
                   $returnValue['squares'] = $squares;
-                  //$room->update(['winner' => $returnValue['winner']]);
+                  $room->update(['winner' => $returnValue['winner']]);
                 }
           }
         $returnValue['squares'] = $squares;
