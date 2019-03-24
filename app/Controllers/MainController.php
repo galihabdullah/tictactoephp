@@ -233,7 +233,7 @@ class MainController extends Controller
             $returnValue["status"] = "draw";
           }else{
               $winner = $this->calculateSquare($squares);
-                if($winner != "-" || $winner != ""){
+                if($winner != "-" && $winner != ""){
                   $returnValue['winner'] = $winner === "X" ? $xplayer : $oplayer;
                   $returnValue['status'] = "finished";
                   $returnValue['squares'] = $squares;
